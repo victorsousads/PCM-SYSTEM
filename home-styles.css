@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0049a2, #007bff);
+    color: #fff;
+}
+
+.navbar {
+    background-color: #0049a2;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    border-bottom: 2px solid #007bff;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.user-info {
+    font-size: 14px;
+}
+
+.logout-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+.home-container {
+    padding: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.buttons-container button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons-container button:hover {
+    background-color: #218838;
+}
+
+.services-status {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.status-card {
+    background: #ffffff;
+    color: #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 calc(30% - 10px);
+    min-width: 250px;
+    padding: 20px;
+    text-align: center;
+}
+
+.status-card h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #0049a2;
+}
+
+.status-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+@media (max-width: 480px) {
+    .buttons-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .status-card {
+        flex: 1 1 100%;
+    }
+}

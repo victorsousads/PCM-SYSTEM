@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home-styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="user-info">
+            <p>Bem-vindo, <span id="user-name"></span></p>
+        </div>
+        <h1>Página Inicial</h1>
+        <button class="logout-button" onclick="logout()">Sair</button>
+    </header>
+
+    <main class="home-container">
+        <nav class="buttons-container">
+            <button onclick="navigateTo('servicos')">Serviços</button>
+            <button onclick="navigateTo('demandas')">Demandas</button>
+            <button onclick="navigateTo('solicitacoes-compras')">Solicitações de Compras</button>
+        </nav>
+
+        <section class="services-status">
+            <div class="status-card">
+                <h2>Novos Serviços</h2>
+                <p>Lista de serviços novos...</p>
+            </div>
+            <div class="status-card">
+                <h2>Serviços em Andamento</h2>
+                <p>Lista de serviços em andamento...</p>
+            </div>
+            <div class="status-card">
+                <h2>Serviços Concluídos</h2>
+                <p>Lista de serviços concluídos...</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('user-name').textContent = localStorage.getItem('username') || 'Usuário';
+
+        function navigateTo(page) {
+            alert(`Navegar para: ${page}`); // Placeholder para navegação
+        }
+
+        function logout() {
+            localStorage.removeItem('username');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
